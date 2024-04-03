@@ -25,7 +25,6 @@ class registerPage {
     //mengisi kolom email
     async fillEmail (randomUser) {
         cy.xpath(locators.datatestid.email_input)
-        //  .type('ridhoherprabowo@gmail.com')
             .type(randomUser, {force: true})
             .should('have.value', randomUser) 
 
@@ -35,8 +34,7 @@ class registerPage {
     async fillPassword () {
         cy.xpath(locators.datatestid.password_input)
             .type('abcdefghijk')
-            // .type('password', {force: true})
-            // .should('have.value', 'password', {timeout: 2000}) 
+            
     }
 
     //masuk ke halaman sign in
